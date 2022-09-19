@@ -1,11 +1,12 @@
 * {
-    box-sizing: border-box;
+    /* changed sizing to flex */
+    box-sizing: flex;
     padding: 0;
     margin: 0;
+    
 }
 
 body {
-
     background-color: #d9dcd6;
 }
 
@@ -14,9 +15,13 @@ body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: #2a607c;
     color: #ffffff;
+     /* right-justified header */
+    text-align: right;
 }
 
 .header h1 {
+    /* added margin to header */
+    margin: 20px;
     display: inline-block;
     font-size: 48px;
 }
@@ -24,7 +29,7 @@ body {
 .header h1 .seo {
     color: #d9dcd6;
 }
-
+/* updated syntax to include header-links */
 .header-links {
     padding-top: 15px;
     margin-right: 20px;
@@ -45,18 +50,14 @@ a {
     color: #ffffff;
     text-decoration: none;
         }
-
+        /* made links change color after visited */
 a:visited {
     color: #d9dcd6;
         }
-
+        /* made links change color and underline when hovering  */
 a:hover {
     text-decoration: underline;
     color: #d9dcd6;
-}
-
-p {
-    font-size: 16px;
 }
 
 .hero {
@@ -67,29 +68,90 @@ p {
     background-size: cover;
     background-position: center;
 }
-
-.float-left {
+/* changed to relative sizing */
+.float-left { 
     float: left;
-    margin-right: 25px;
-}
-
+    margin-right: 2%;
+    margin-left: 2%;
+ }
+/* changed to relative sizing */
 .float-right {
     float: right;
-    margin-left: 25px;
+    margin-left: 2%;
+    margin-right: 2%;
 }
-
-.content {
+/* changed to relative sizing */
+.content { 
     width: 75%;
     display: inline-block;
-    margin-left: 20px;
+    flex-direction: column;
+    margin-left: 2%;
+          }
+    /* changed sizing */
+p {
+    font-size: 2vw;
+    }
+/* changed to relative sizing and auto height */
+.search-engine-optimization {
+    margin-bottom: 2%;
+    padding: 5%;
+    height: auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #0072bb;
+    color: #ffffff;
+}    
+/* changed to relative sizing and auto height */
+.online-reputation-management {
+    margin-bottom: 2%;
+    padding: 5%;
+    height: auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #0072bb;
+    color: #ffffff;
+}
+/* changed to relative sizing and auto height */
+.social-media-marketing {
+    margin-bottom: 2%;
+    padding: 5%;
+    height: auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #0072bb;
+    color: #ffffff;
 }
 
+.search-engine-optimization img {
+     max-height: 200px;
+}
+
+.online-reputation-management img {
+    max-height: 200px;
+}
+
+.social-media-marketing img {
+    max-height: 200px;
+}
+/* changed font and margin to relative size */
+.search-engine-optimization h2 {
+    margin-bottom: 2%;
+    font-size: 225%;
+}
+/* changed font and margin to relative size */
+.online-reputation-management h2 {
+    margin-bottom: 2%;
+    font-size: 225%;
+}
+/* changed font and margin to relative size */
+.social-media-marketing h2 {
+    margin-bottom: 2%;
+    font-size: 225%;
+}
+/* moved benefits class css code to bottom */
 .benefits {
     margin-right: 20px;
     padding: 20px;
     clear: both;
     float: right;
-    width: 20%;
+    width: 15%;
     height: 100%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #2589bd;
@@ -141,63 +203,27 @@ p {
     display: block;
     margin: 10px auto;
     max-width: 150px;
-}
+ }
+ /* I wanted to make the .benefit class transform into a right-justified, left-growing set of elements after the screen became to small to show this side-by-side with the .contents elements but I haven't figured it out yet.
+@media only screen and (max-width: 800px) {
+    .benefit {
+        display: inline-block;
+        float: none;
+        clear: none;
+    }
+    .benefit-lead {
+        flex-wrap: flex;
+    .benefit-brand {
+        flex-wrap: flex;
+    .benefit-cost {
+        flex-wrap: flex;
+    }
+    } */
 
-.search-engine-optimization {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
 
-.online-reputation-management {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-.social-media-marketing {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-.search-engine-optimization img {
-    max-height: 200px;
-}
-
-.online-reputation-management img {
-    max-height: 200px;
-}
-
-.social-media-marketing img {
-    max-height: 200px;
-}
-
-.search-engine-optimization h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-.online-reputation-management h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-.social-media-marketing h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
 
 .footer {
+    position: bottom;
     padding: 30px;
     clear: both;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -205,5 +231,6 @@ p {
 }
 
 .footer h2 {
+    position: bottom;
     font-size: 20px;
 }
