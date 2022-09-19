@@ -207,6 +207,7 @@ p {
  /* I wanted to make the .benefit class transform into a right-justified, left-growing set of elements after the screen became to small to show this side-by-side with the .contents elements but I haven't figured it out yet.
 @media only screen and (max-width: 800px) {
     .benefit {
+        justify-content: right;
         display: inline-block;
         float: none;
         clear: none;
